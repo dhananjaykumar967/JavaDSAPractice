@@ -1,10 +1,12 @@
 package javaDSA.arrays;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
-public class TwoSum1 {
+public class TwoSum1WithHashMap {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(new TwoSum1().twoSum(new int[]{2, 7, 11, 15}, 9)));
+        System.out.println(Arrays.toString(new TwoSum1WithHashMap().twoSum(new int[]{3,3}, 6)));
     }
 
     /**
@@ -29,13 +31,15 @@ public class TwoSum1 {
             return new int[]{0, 1};
         }
 
+        Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] + nums[j] == target) {
-                    return new int[]{i, j};
-                }
+            int resultCompletion = target - nums[i];
+            if (map.containsKey(resultCompletion)) {
+                return new int[]{map.get(resultCompletion), i};
             }
+            map.put(nums[i], i);
         }
+
         return new int[]{0, 0};
     }
 }

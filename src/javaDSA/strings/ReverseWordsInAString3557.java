@@ -1,6 +1,6 @@
 package javaDSA.strings;
 
-public class ReverseWordsInAString3 {
+public class ReverseWordsInAString3557 {
     public static void main(String[] args) {
         String st = "Let's take LeetCode contest";
         String[] stArray = st.split(" ");
