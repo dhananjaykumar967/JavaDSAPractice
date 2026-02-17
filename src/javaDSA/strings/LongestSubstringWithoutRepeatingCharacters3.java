@@ -18,26 +18,23 @@ public class LongestSubstringWithoutRepeatingCharacters3 {
     //Explanation: The answer is "wke", with the length of 3.
     //Notice that the answer must be a substring, "pwke" is a subsequence and not a substring./
 
-    public static void main(String[] args) {
-        String s = "abcabcbb";
-        System.out.println(lengthOfLongestSubstring(s));
-    }
-
-    public static int lengthOfLongestSubstring(String s) {
-        if (s.length() <= 1) {
-            return s.length();
-        }
-        StringBuilder subString = new StringBuilder();
-        int temp = 0;
-        for (int i = 0; i < s.length(); i++) {
-            subString.append(s.charAt(i));
-            if (subString.indexOf(String.valueOf(s.charAt(i))) != -1) {
-                temp=0;
-                subString.append(s.charAt(i));
-                temp++;
-            }
-        }
-
-        return 0;
-    }
+//    public static void main(String[] args) {
+//        String s = "abcabcbb";
+//        System.out.println(lengthOfLongestSubstring(s));
+//    }
+//
+//    public static int lengthOfLongestSubstring(String s) {
+//        if (s.length() <= 1) {
+//            return s.length();
+//        }
+//
+//        int maxLength = 0;
+//        int[] arr = new int[126];
+//        int left = 0;
+//        int right = 0;
+//        while(left)
+//
+//
+//        return 0;
+//    }
 }
